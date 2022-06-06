@@ -27,10 +27,10 @@ const handler = (req: NextApiRequest, res: NextApiResponse<SearchResponse>) => {
     success: true,
     results: [
       {
-        title: 'Next.js',
+        title: q,
         url: 'https://nextjs.org/docs',
         description: 'A framework for server-rendered React apps',
-        updatedAt: 1514764907000,
+        updatedAt: new Date().getTime(),
       },
     ],
   })
