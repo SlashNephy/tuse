@@ -13,8 +13,7 @@
     "hadolint": "hadolint Dockerfile",
     "format": "concurrently -n format: 'yarn:format:*'",
     "format:eslint": "yarn lint:eslint --fix",
-    "format:prettier": "yarn lint:prettier --write",
-    "format:prisma": "prisma format"
+    "format:prettier": "yarn lint:prettier --write"
   },
   "dependencies": {
     "@discordjs/rest": "0.5.0",
