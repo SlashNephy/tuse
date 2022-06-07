@@ -135,7 +135,9 @@
     // return の返り値チェック厳格化を解除
     "@typescript-eslint/no-unsafe-return": "off",
     // Promise の返り値チェック厳格化を解除
-    "@typescript-eslint/no-misused-promises": "off"
+    "@typescript-eslint/no-misused-promises": "off",
+    // アクセス修飾子を強制
+    "@typescript-eslint/explicit-member-accessibility": "error"
   },
   "overrides": [
     {
