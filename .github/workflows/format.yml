@@ -23,10 +23,10 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: 18
-          cache-dependency-path: yarn.lock
+          cache: yarn
 
       - name: Install
-        run: yarn install --immutable --immutable-cache
+        run: yarn install --immutable
 
       - name: Format
         run: yarn format
