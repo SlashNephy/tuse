@@ -1,14 +1,20 @@
 import { addHours } from 'date-fns'
 
-import { search } from '../../lib/search'
+import { search } from '../../lib/search/providers'
 
-import type { SearchResult } from '../../lib/search'
-import type { NextApiRequest, NextApiResponse } from 'next'
+import type {
+  SearchResult,
+  SearchSort,
+  SearchType,
+} from '../../lib/search/models'
+import type { NextApiHandler, NextApiRequest } from 'next'
 
 export type SearchResponse =
   | {
       success: true
-      results: SearchResult[]
+      results: {
+        [type in SearchType]?: SearchResult[]
+      }
     }
   | {
       success: false
@@ -16,40 +22,51 @@ export type SearchResponse =
     }
 
 type CacheState = {
-  results: SearchResult[]
+  response: SearchResponse
   expiresAt: Date
 }
 
-const cache: Map<string, CacheState> = new Map()
+const cache = new Map<string, CacheState>()
 
-const handler = async (
-  req: NextApiRequest,
-  res: NextApiResponse<SearchResponse>
-) => {
-  const { q } = req.query
-  if (typeof q !== 'string') {
-    return res
+const handler: NextApiHandler<SearchResponse> = async (request, response) => {
+  const query = parseRequestQuery(request, 'q')
+  if (!query) {
+    return response
       .status(400)
       .json({ success: false, error: 'Query parameter "q" is required.' })
   }
 
+  const sort = parseRequestQuery<SearchSort>(request, 'sort')
+
   try {
-    let state = cache.get(q)
+    let state = cache.get(query)
     if (!state || state.expiresAt < new Date()) {
       state = {
-        results: await search(q),
+        response: {
+          success: true,
+          results: await search(query, sort),
+        },
         expiresAt: addHours(new Date(), 1),
       }
-      cache.set(q, state)
+      cache.set(query, state)
     }
 
-    res.status(200).json({
-      success: true,
-      results: state.results,
-    })
+    response.status(200).json(state.response)
   } catch (error) {
-    return res.status(500).json({ success: false, error: `${error}` })
+    return response.status(500).json({ success: false, error: `${error}` })
   }
+}
+
+const parseRequestQuery = <T = string>(
+  request: NextApiRequest,
+  key: string
+): T | null => {
+  if (!(key in request.query)) {
+    return null
+  }
+
+  const value = request.query[key]
+  return typeof value === 'string' ? (value as unknown as T) : null
 }
 
 export default handler

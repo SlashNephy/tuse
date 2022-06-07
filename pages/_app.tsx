@@ -1,5 +1,4 @@
 import { ColorSchemeProvider, MantineProvider } from '@mantine/core'
-import { NotificationsProvider } from '@mantine/notifications'
 import Head from 'next/head'
 import { QueryClient, QueryClientProvider } from 'react-query'
 
@@ -34,9 +33,7 @@ const MyApp = ({ Component, pageProps }: AppProps) => {
               colorScheme,
             }}
           >
-            <NotificationsProvider position="top-right" autoClose={7000}>
-              <Component {...pageProps} />
-            </NotificationsProvider>
+            <Component {...pageProps} />
           </MantineProvider>
         </ColorSchemeProvider>
       </QueryClientProvider>

@@ -1,26 +1,25 @@
 import {
-  Anchor,
-  Badge,
   Center,
   Container,
-  Group,
   Loader,
+  Space,
   Text,
   TextInput,
   Title,
 } from '@mantine/core'
 import Head from 'next/head'
 import React from 'react'
-import { useQuery } from 'react-query'
 import { Search } from 'tabler-icons-react'
 
-import { Timer } from '../lib/Timer'
+import { SearchResultTabs } from '../components/SearchResultTabs'
+import { SearchSummary } from '../components/SearchSummary'
+import { useSearch } from '../lib/useSearch'
 import packageJson from '../package.json'
 
-import type { SearchResponse } from './api/search'
-import type { NextPage } from 'next'
+import type { GetServerSideProps, NextPage } from 'next'
 
-const Home: NextPage = () => {
+// eslint-disable-next-line react/prop-types
+const Home: NextPage<{ title: string }> = ({ title }) => {
   const [query, setQuery] = React.useState<string>()
   const [isLoading, setIsLoading] = React.useState(false)
 
@@ -36,12 +35,12 @@ const Home: NextPage = () => {
   return (
     <>
       <Head>
-        <title>{packageJson.name}</title>
+        <title>{title}</title>
       </Head>
 
       <Container>
         <Center>
-          <Title>{packageJson.name}</Title>
+          <Title>{title}</Title>
         </Center>
 
         <TextInput
@@ -56,56 +55,44 @@ const Home: NextPage = () => {
   )
 }
 
+// サーバー側で環境変数を読み取る
+// eslint-disable-next-line @typescript-eslint/require-await
+export const getServerSideProps: GetServerSideProps = async () => {
+  return {
+    props: {
+      title: process.env.SITE_TITLE ?? packageJson.name,
+    },
+  }
+}
+
 const SearchResult: React.FC<{
   query: string
   setIsLoading: React.Dispatch<React.SetStateAction<boolean>>
 }> = ({ query, setIsLoading }) => {
-  const [elapsed, setElapsed] = React.useState<number>()
-  const { data, isLoading } = useQuery<SearchResponse>(
-    ['search', query],
-    async () => {
-      const timer = new Timer()
-      const results = await fetch(
-        `/api/search?q=${encodeURIComponent(query)}`
-      ).then(async (response) => await response.json())
-      setElapsed(timer.stop())
-      return results
-    }
-  )
+  const search = useSearch(query)
 
   React.useEffect(() => {
-    setIsLoading(isLoading)
-  }, [isLoading, setIsLoading])
+    setIsLoading(search.isLoading)
+  }, [search.isLoading, setIsLoading])
 
-  if (!data) {
+  if (!search.response) {
     return null
   }
 
-  if (!data.success) {
+  if (!search.response.success) {
     return (
       <>
         <Text>取得に失敗しました</Text>
-        <Text>{data.error}</Text>
+        <Text>{search.response.error}</Text>
       </>
     )
   }
 
   return (
     <>
-      <Text>
-        「{query}」の検索結果 ({data.results.length} 件, {elapsed} ms)
-      </Text>
-
-      {data.results.map((result, index) => (
-        <Group key={index}>
-          <Badge>{result.type}</Badge>
-          <Anchor href={result.url}>
-            <Title>{result.title}</Title>
-          </Anchor>
-          <Text>{result.description}</Text>
-          <Text>{new Date(result.createdAt).toLocaleString()}</Text>
-        </Group>
-      ))}
+      <SearchSummary search={search} />
+      <Space h="xl" />
+      <SearchResultTabs search={search} />
     </>
   )
 }
