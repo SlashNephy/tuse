@@ -23,7 +23,7 @@ export const SearchResultTabs: React.FC<{ search: SearchResultProps }> = ({
   }
 
   return (
-    <Tabs>
+    <Tabs active={1}>
       <Space h="xl" />
 
       {Object.entries(search.response.results)
