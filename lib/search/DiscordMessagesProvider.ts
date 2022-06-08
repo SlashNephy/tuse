@@ -59,7 +59,7 @@ export class DiscordMessagesProvider extends SearchProvider<'discord.messages'> 
 
     return {
       type: 'discord.messages',
-      url: `https://discord.com/channels/${this.guildId}/${message.channel_id}`,
+      url: `https://discord.com/channels/${this.guildId}/${message.channel_id}/${message.id}`,
       imageUrl: message.embeds?.[0]?.thumbnail?.url,
       description: message.content,
       author: {
