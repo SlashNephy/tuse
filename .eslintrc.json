@@ -1,5 +1,10 @@
 {
-  "plugins": ["@typescript-eslint", "promise", "unused-imports", "css-import-order"],
+  "plugins": [
+    "@typescript-eslint",
+    "promise",
+    "unused-imports",
+    "css-import-order"
+  ],
   "extends": [
     "eslint:recommended",
     "next/core-web-vitals",
@@ -43,7 +48,14 @@
       "warn",
       {
         // 組み込み ← 外部依存 ← 内部依存 ← import type の順にする
-        "groups": ["builtin", "external", ["parent", "sibling", "index"], "object", "type", "unknown"],
+        "groups": [
+          "builtin",
+          "external",
+          ["parent", "sibling", "index"],
+          "object",
+          "type",
+          "unknown"
+        ],
         // カテゴリー間に改行を入れる
         "newlines-between": "always",
         // 大文字小文字区別なしで ABC 順にする
