@@ -1,0 +1,17 @@
+version: '3.8'
+
+services:
+  db:
+    # https://github.com/dragonflydb/dragonfly
+    image: docker.dragonflydb.io/dragonflydb/dragonfly
+    restart: always
+    ports:
+      - '6379:6379/tcp'
+    volumes:
+      - snapshot:/data
+    ulimits:
+      memlock: -1
+
+volumes:
+  snapshot:
+    driver: local

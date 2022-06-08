@@ -4,7 +4,9 @@
   "license": "MIT",
   "repository": "https://github.com/SlashNephy/tuse",
   "scripts": {
-    "dev": "next dev",
+    "dev": "concurrently -n dev: 'yarn:dev:*'",
+    "dev:next": "next dev",
+    "dev:db": "docker-compose up",
     "build": "next build",
     "start": "next start",
     "lint": "concurrently -n lint: 'yarn:lint:*'",
@@ -21,12 +23,12 @@
     "@mantine/hooks": "4.2.8",
     "@mantine/next": "4.2.8",
     "@octokit/rest": "18.12.0",
-    "date-fns": "2.28.0",
     "next": "12.1.6",
     "node-fetch": "3.2.5",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-query": "3.39.1",
+    "redis": "4.1.0",
     "tabler-icons-react": "1.48.1"
   },
   "devDependencies": {

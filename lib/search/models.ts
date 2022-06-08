@@ -21,4 +21,8 @@ export type SearchResult<T = SearchType> = {
   }
 }
 
+export type SearchResults = {
+  [type in SearchType]?: SearchResult[]
+}
+
 export type SearchSort = 'relevance' | 'date' | null
