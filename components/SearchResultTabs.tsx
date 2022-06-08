@@ -18,12 +18,14 @@ import type { SearchResultProps } from './props'
 export const SearchResultTabs: React.FC<{ search: SearchResultProps }> = ({
   search,
 }) => {
+  const [activeTab, setActiveTab] = React.useState(1)
+
   if (!search.response?.success) {
     return null
   }
 
   return (
-    <Tabs active={1}>
+    <Tabs active={activeTab} onTabChange={(tabIndex) => setActiveTab(tabIndex)}>
       <Space h="xl" />
 
       {Object.entries(search.response.results)
