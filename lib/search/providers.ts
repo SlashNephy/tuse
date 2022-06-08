@@ -1,5 +1,4 @@
 import { DiscordMessagesProvider } from './DiscordMessagesProvider'
-import { GitHubCommitsProvider } from './GitHubCommitsProvider'
 import { ScrapboxPagesProvider } from './ScrapboxPagesProvider'
 
 import type { SearchResult, SearchSort, SearchType } from './models'
@@ -8,7 +7,7 @@ const providers = [
   new ScrapboxPagesProvider(),
   new DiscordMessagesProvider(),
   // new DiscordMembersProvider(),
-  new GitHubCommitsProvider(),
+  // new GitHubCommitsProvider(),
 ] as const
 
 export const search = async (
