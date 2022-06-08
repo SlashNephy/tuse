@@ -8,6 +8,7 @@ import {
   Title,
 } from '@mantine/core'
 import Head from 'next/head'
+import { useRouter } from 'next/router'
 import React from 'react'
 import { Search } from 'tabler-icons-react'
 
@@ -20,7 +21,9 @@ import type { GetServerSideProps, NextPage } from 'next'
 
 // eslint-disable-next-line react/prop-types
 const Home: NextPage<{ title: string }> = ({ title }) => {
-  const [query, setQuery] = React.useState<string>()
+  const router = useRouter()
+  const initialQuery = router.query.q as string | undefined
+  const [query, setQuery] = React.useState<string | undefined>(initialQuery)
   const [isLoading, setIsLoading] = React.useState(false)
 
   const handleKeyDown: React.KeyboardEventHandler<HTMLInputElement> = (
@@ -44,6 +47,7 @@ const Home: NextPage<{ title: string }> = ({ title }) => {
         </Center>
 
         <TextInput
+          placeholder={initialQuery}
           icon={<Search />}
           rightSection={isLoading && <Loader size="xs" />}
           onKeyDown={handleKeyDown}
