@@ -4,7 +4,7 @@ export type SearchType =
   | 'discord.messages'
   | 'scrapbox.pages'
 
-export type SearchResult<T = SearchType> = {
+export type SearchResult<T = SearchType | string> = {
   type: T
   url: string
   title?: string

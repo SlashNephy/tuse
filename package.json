@@ -6,6 +6,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
+    "build:dts": "dts-bundle-generator -o dist/SearchProvider.d.ts lib/search/SearchProvider.ts && prettier --write dist/SearchProvider.d.ts",
     "start": "next start",
     "lint": "concurrently -n lint: 'yarn:lint:*'",
     "lint:eslint": "next lint",
@@ -38,6 +39,7 @@
     "@typescript-eslint/parser": "5.27.1",
     "concurrently": "7.2.1",
     "discord-api-types": "0.33.5",
+    "dts-bundle-generator": "6.11.0",
     "eslint": "8.17.0",
     "eslint-config-next": "12.1.6",
     "eslint-config-prettier": "8.5.0",

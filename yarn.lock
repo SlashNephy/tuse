@@ -1434,6 +1434,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"dts-bundle-generator@npm:6.11.0":
+  version: 6.11.0
+  resolution: "dts-bundle-generator@npm:6.11.0"
+  dependencies:
+    typescript: ">=3.0.1"
+    yargs: ^17.2.1
+  bin:
+    dts-bundle-generator: dist/bin/dts-bundle-generator.js
+  checksum: 0001264d818b80e62e351e4a97aff5bea4d4f00b51a9717e49c7d4ef1865fc100a8e0031277b7c44d70bf71bc883da2d25741c571cceb1ec29e687b10ba6b633
+  languageName: node
+  linkType: hard
+
 "duplexer2@npm:^0.1.2":
   version: 0.1.4
   resolution: "duplexer2@npm:0.1.4"
@@ -3617,6 +3629,7 @@ __metadata:
     concurrently: 7.2.1
     date-fns: 2.28.0
     discord-api-types: 0.33.5
+    dts-bundle-generator: 6.11.0
     eslint: 8.17.0
     eslint-config-next: 12.1.6
     eslint-config-prettier: 8.5.0
@@ -3654,7 +3667,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.7.3":
+"typescript@npm:4.7.3, typescript@npm:>=3.0.1":
   version: 4.7.3
   resolution: "typescript@npm:4.7.3"
   bin:
@@ -3664,7 +3677,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@4.7.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@4.7.3#~builtin<compat/typescript>, typescript@patch:typescript@>=3.0.1#~builtin<compat/typescript>":
   version: 4.7.3
   resolution: "typescript@patch:typescript@npm%3A4.7.3#~builtin<compat/typescript>::version=4.7.3&hash=7ad353"
   bin:
@@ -3880,7 +3893,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs@npm:^17.3.1":
+"yargs@npm:^17.2.1, yargs@npm:^17.3.1":
   version: 17.5.1
   resolution: "yargs@npm:17.5.1"
   dependencies:
