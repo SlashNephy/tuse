@@ -1,0 +1,43 @@
+---
+name: 'Check providers'
+
+# yamllint disable-line rule:truthy
+on:
+  push:
+    branches:
+      - 'master'
+    paths:
+      - 'providers/**'
+
+  pull_request:
+    types:
+      - opened
+      - synchronize
+
+  workflow_dispatch:
+
+jobs:
+  build:
+    if: github.event_name != 'push'
+    uses: SlashNephy/.github/.github/workflows/yarn-run.yml@master
+    permissions:
+      contents: 'read'
+    with:
+      script: 'build'
+      working-directory: 'providers'
+
+  lint:
+    uses: SlashNephy/.github/.github/workflows/yarn-lint.yml@master
+    permissions:
+      contents: 'read'
+      pull-requests: 'write'
+    with:
+      working-directory: 'providers'
+
+  format:
+    if: github.event_name == 'push'
+    uses: SlashNephy/.github/.github/workflows/yarn-format.yml@master
+    permissions:
+      contents: 'write'
+    with:
+      working-directory: 'providers'

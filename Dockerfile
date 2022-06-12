@@ -1,17 +1,32 @@
-FROM --platform=$BUILDPLATFORM node:18.3.0-bullseye-slim AS cache
+FROM --platform=$BUILDPLATFORM node:18.3.0-bullseye-slim AS cache-app
 WORKDIR /app
 
-COPY ./.yarn/ ./.yarn/
-COPY ./package.json ./.yarnrc.yml ./yarn.lock ./
+COPY ./app/.yarn/ ./.yarn/
+COPY ./app/package.json ./app/.yarnrc.yml ./app/yarn.lock ./
 RUN yarn --immutable
 
-FROM --platform=$BUILDPLATFORM node:18.3.0-bullseye-slim AS build
+FROM --platform=$BUILDPLATFORM node:18.3.0-bullseye-slim AS build-app
 ENV NEXT_TELEMETRY_DISABLED=1
 WORKDIR /app
 
-COPY --from=cache /app/node_modules/ ./node_modules/
-COPY ./ ./
+COPY --from=cache-app /app/node_modules/ ./node_modules/
+COPY ./app/ ./
 RUN yarn build
+
+FROM --platform=$BUILDPLATFORM node:18.3.0-bullseye-slim AS cache-providers
+WORKDIR /providers
+
+COPY ./providers/.yarn/ ./.yarn/
+COPY ./providers/package.json ./providers/.yarnrc.yml ./providers/yarn.lock ./
+RUN yarn --immutable
+
+FROM --platform=$BUILDPLATFORM node:18.3.0-bullseye-slim AS build-providers
+ENV NEXT_TELEMETRY_DISABLED=1
+WORKDIR /providers
+
+COPY --from=cache-providers /providers/node_modules/ ./node_modules/
+COPY ./providers/ ./
+RUN yarn bundle
 
 FROM --platform=$TARGETPLATFORM node:18.3.0-bullseye-slim AS runtime
 ENV NODE_ENV="production"
@@ -20,9 +35,10 @@ ENV NEXT_TELEMETRY_DISABLED=1
 WORKDIR /app
 USER node
 
-COPY --from=build /app/package.json /app/next.config.js ./
-COPY --from=build /app/public/ ./public/
-COPY --from=build --chown=node:node /app/.next/standalone ./
-COPY --from=build --chown=node:node /app/.next/static ./.next/static
+COPY --from=build-providers /app/plugins/ ./plugins/
+COPY --from=build-app /app/package.json /app/next.config.js ./
+COPY --from=build-app /app/public/ ./public/
+COPY --from=build-app --chown=node:node /app/.next/standalone ./
+COPY --from=build-app --chown=node:node /app/.next/static ./.next/static
 
 ENTRYPOINT ["node", "server.js"]
