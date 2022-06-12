@@ -21,7 +21,6 @@ export default class DiscordMembersSearchPlugin
   public constructor(config: PluginConfig<DiscordMembersSearchPluginConfig>) {
     const { botToken, guildId } = config
     if (botToken) {
-      // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
       this.client = new REST({ version: '10' }).setToken(botToken)
       this.guildId = guildId
     }

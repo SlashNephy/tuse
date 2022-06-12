@@ -24,7 +24,6 @@ export default class DiscordMessagesSearchPlugin
     if (userToken) {
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       this.client = new REST({ version: '9', authPrefix: '' as any }).setToken(
-        // eslint-disable-next-line @typescript-eslint/no-unsafe-argument
         userToken
       )
       this.guildId = guildId
