@@ -976,7 +976,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-loader@npm:^8.2.5":
+"babel-loader@npm:8.2.5":
   version: 8.2.5
   resolution: "babel-loader@npm:8.2.5"
   dependencies:
@@ -991,14 +991,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-dynamic-import-webpack@npm:^1.1.0":
+"babel-plugin-dynamic-import-webpack@npm:1.1.0":
   version: 1.1.0
   resolution: "babel-plugin-dynamic-import-webpack@npm:1.1.0"
   checksum: cfc459ac93b840d21c42629113786ad9a14f628aff9ab17a3b2c9ac35e88e7679a5e1c5108e60c0b752e2e98368307aba166ed4cca2b625214cbbee951a13111
   languageName: node
   linkType: hard
 
-"babel-plugin-remove-webpack@npm:^1.1.0":
+"babel-plugin-remove-webpack@npm:1.1.0":
   version: 1.1.0
   resolution: "babel-plugin-remove-webpack@npm:1.1.0"
   checksum: c1edb0a0331c074e2e677261741be2cde13562a8c6eb3318869de5c7e30377ec2f8862e3c9e354f771031d462e884e550d04fa7c60582ddb335c544cb6c3eed9
@@ -1012,7 +1012,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"babel-plugin-transform-react-jsx@npm:^6.24.1":
+"babel-plugin-transform-react-jsx@npm:6.24.1":
   version: 6.24.1
   resolution: "babel-plugin-transform-react-jsx@npm:6.24.1"
   dependencies:
@@ -3681,10 +3681,10 @@ __metadata:
     "@types/node": 17.0.41
     "@types/react": 18.0.12
     "@types/webpack": 5.28.0
-    babel-loader: ^8.2.5
-    babel-plugin-dynamic-import-webpack: ^1.1.0
-    babel-plugin-remove-webpack: ^1.1.0
-    babel-plugin-transform-react-jsx: ^6.24.1
+    babel-loader: 8.2.5
+    babel-plugin-dynamic-import-webpack: 1.1.0
+    babel-plugin-remove-webpack: 1.1.0
+    babel-plugin-transform-react-jsx: 6.24.1
     concurrently: 7.2.1
     discord-api-types: 0.33.5
     eslint: 8.17.0
