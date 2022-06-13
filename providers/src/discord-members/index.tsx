@@ -8,12 +8,18 @@ import type {
   SearchSort,
 } from '../../plugin'
 import type { APIGuildMember } from 'discord-api-types/v10'
+import * as React from 'react'
+import { BrandDiscord } from 'tabler-icons-react'
 
 export default class DiscordMembersSearchPlugin
   implements ISearchPlugin<'discord.members'>
 {
-  public readonly ApiLevel = 1
-  public readonly Type = 'discord.members' as const
+  public readonly info = {
+    apiVersion: 1 as const,
+    type: 'discord.members' as const,
+    name: 'Discord メンバー',
+    renderIcon: () => <BrandDiscord size={16} />,
+  }
 
   private readonly client: REST | null = null
   private readonly guildId: string | undefined

@@ -4,12 +4,18 @@ import type {
   ISearchPlugin,
   PluginConfig,
 } from '../../plugin'
+import * as React from 'react'
+import { Notes } from 'tabler-icons-react'
 
 export default class ScrapboxPagesSearchPlugin
   implements ISearchPlugin<'scrapbox.pages'>
 {
-  public readonly ApiLevel = 1
-  public readonly Type = 'scrapbox.pages' as const
+  public readonly info = {
+    apiVersion: 1 as const,
+    type: 'scrapbox.pages' as const,
+    name: 'Scrapbox',
+    renderIcon: () => <Notes size={16} />,
+  }
 
   public constructor(
     private config: PluginConfig<ScrapboxPagesSearchPluginConfig>

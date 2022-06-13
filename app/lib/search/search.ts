@@ -1,22 +1,30 @@
-import { readdir, lstat, writeFile, mkdir, readFile } from 'fs/promises'
+import { readdir, writeFile, mkdir, readFile } from 'fs/promises'
 import { resolve } from 'path'
+
+import '@slashnephy/typescript-extension'
+import { existsAsync } from '@slashnephy/typescript-extension/dist/node/fs/exists'
 
 import type {
   SearchResult,
   SearchSort,
   PluginConfig,
   SearchPluginConstructor,
+  PluginInfo,
 } from './plugin'
+
+export type ClientSearchResult<T = string> = SearchResult<T> & {
+  info: PluginInfo<T>
+}
 
 export const search = async (
   q: string,
   sort: SearchSort
 ): Promise<{
-  [type in string]?: SearchResult[]
+  [type in string]: ClientSearchResult[]
 }> => {
   const pluginsDir =
     process.env.TUSE_PLUGINS_DIR ?? resolve(__dirname, 'plugins')
-  if (!(await exists(pluginsDir))) {
+  if (!(await existsAsync(pluginsDir))) {
     await mkdir(pluginsDir)
   }
 
@@ -45,9 +53,13 @@ export const search = async (
 
       // https://stackoverflow.com/a/56760166
       const plugin = new (pluginClass as SearchPluginConstructor)(pluginConfig)
+      const results = await plugin.search(q, sort)
 
       return {
-        [plugin.Type]: await plugin.search(q, sort),
+        [plugin.info.type]: results.map((result) => ({
+          ...result,
+          info: plugin.info,
+        })),
       }
     })
   )
@@ -72,7 +84,7 @@ const loadPluginConfig = async (
   const path = resolve(pluginsDir, pluginFile.replace(/\.js$/, '.config.json'))
 
   let config: PluginConfig
-  if (await exists(path)) {
+  if (await existsAsync(path)) {
     const content = await readFile(path, 'utf8')
     config = JSON.parse(content)
     // config = await import(path)
@@ -82,12 +94,4 @@ const loadPluginConfig = async (
   }
 
   return config
-}
-
-const exists = async (path: string) => {
-  try {
-    return !!(await lstat(path))
-  } catch {
-    return false
-  }
 }

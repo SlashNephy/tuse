@@ -1,4 +1,14 @@
-export type PluginApiLevel = 1
+import type React from 'react'
+
+export type PluginApiVersion = 1
+
+export type PluginInfo<T = string> = {
+  apiVersion: PluginApiVersion
+  type: T
+  name: string
+  renderIcon?: () => React.ReactNode
+}
+
 export type PluginConfig<T = Record<string, unknown>> = Record<
   string,
   unknown
@@ -6,8 +16,7 @@ export type PluginConfig<T = Record<string, unknown>> = Record<
   T
 
 export interface ISearchPlugin<T = string> {
-  readonly ApiLevel: PluginApiLevel
-  readonly Type: T
+  readonly info: PluginInfo<T>
 
   search(q: string, sort: SearchSort): Promise<SearchResult<T>[]>
 }

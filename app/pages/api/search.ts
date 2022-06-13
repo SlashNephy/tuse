@@ -2,7 +2,8 @@ import { addHours } from 'date-fns'
 
 import { search } from '../../lib/search/search'
 
-import type { SearchResult, SearchSort } from '../../lib/search/plugin'
+import type { SearchSort } from '../../lib/search/plugin'
+import type { ClientSearchResult } from '../../lib/search/search'
 import type { NextApiHandler, NextApiRequest } from 'next'
 
 export type SearchResponse =
@@ -10,7 +11,7 @@ export type SearchResponse =
       success: true
       elapsed: number
       results: {
-        [type in string]?: SearchResult[]
+        [type in string]: ClientSearchResult[]
       }
     }
   | {

@@ -8,11 +8,9 @@ import {
   Text,
   Title,
 } from '@mantine/core'
+import '@slashnephy/typescript-extension'
 import React from 'react'
 
-import { getSearchTypeIcon, getSearchTypeLabel } from './ui'
-
-import type { SearchType } from '../lib/search/models'
 import type { SearchResultProps } from './props'
 
 export const SearchResultTabs: React.FC<{ search: SearchResultProps }> = ({
@@ -33,8 +31,8 @@ export const SearchResultTabs: React.FC<{ search: SearchResultProps }> = ({
         .map(([type, results]) => (
           <Tabs.Tab
             key={type}
-            label={getSearchTypeLabel(type as SearchType)}
-            icon={getSearchTypeIcon(type as SearchType)}
+            label={results.first().info.name}
+            icon={results.first().info.renderIcon?.()}
           >
             {results.map((result, index) => (
               <>

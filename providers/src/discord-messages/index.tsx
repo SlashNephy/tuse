@@ -9,12 +9,18 @@ import type {
 import type { RouteLike } from '@discordjs/rest'
 import type { APIGuildMember } from 'discord-api-types/v10'
 import type { APIMessage, APIThreadChannel } from 'discord-api-types/v9'
+import { BrandDiscord } from 'tabler-icons-react'
+import * as React from 'react'
 
 export default class DiscordMessagesSearchPlugin
   implements ISearchPlugin<'discord.messages'>
 {
-  public readonly ApiLevel = 1
-  public readonly Type = 'discord.messages' as const
+  public readonly info = {
+    apiVersion: 1 as const,
+    type: 'discord.messages' as const,
+    name: 'Discord メッセージ',
+    renderIcon: () => <BrandDiscord size={16} />,
+  }
 
   private readonly client: REST | null = null
   private readonly guildId: string | undefined

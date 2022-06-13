@@ -7,12 +7,18 @@ import type {
   SearchSort,
 } from '../../plugin'
 import type { operations } from '@octokit/openapi-types'
+import * as React from 'react'
+import { BrandGithub } from 'tabler-icons-react'
 
 export default class GitHubCommitsSearchPlugin
   implements ISearchPlugin<'github.commits'>
 {
-  public readonly ApiLevel = 1
-  public readonly Type = 'github.commits' as const
+  public readonly info = {
+    apiVersion: 1 as const,
+    type: 'github.commits' as const,
+    name: 'GitHub コミット',
+    renderIcon: () => <BrandGithub size={16} />,
+  }
 
   private readonly client: Octokit | null = null
 

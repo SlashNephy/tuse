@@ -454,6 +454,31 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/prop-types@npm:*":
+  version: 15.7.5
+  resolution: "@types/prop-types@npm:15.7.5"
+  checksum: 5b43b8b15415e1f298243165f1d44390403bb2bd42e662bca3b5b5633fdd39c938e91b7fce3a9483699db0f7a715d08cef220c121f723a634972fdf596aec980
+  languageName: node
+  linkType: hard
+
+"@types/react@npm:18.0.12":
+  version: 18.0.12
+  resolution: "@types/react@npm:18.0.12"
+  dependencies:
+    "@types/prop-types": "*"
+    "@types/scheduler": "*"
+    csstype: ^3.0.2
+  checksum: 526ea13b3adf7fe4b475e55b7426510a7861ef2910664a9014ef42cba0c699d5167dc378eb161e2ec26c07a3b6fde9b6bdcbbb6f4b5580612246bc289395ef03
+  languageName: node
+  linkType: hard
+
+"@types/scheduler@npm:*":
+  version: 0.16.2
+  resolution: "@types/scheduler@npm:0.16.2"
+  checksum: b6b4dcfeae6deba2e06a70941860fb1435730576d3689225a421280b7742318d1548b3d22c1f66ab68e414f346a9542f29240bc955b6332c5b11e561077583bc
+  languageName: node
+  linkType: hard
+
 "@types/webpack@npm:5.28.0":
   version: 5.28.0
   resolution: "@types/webpack@npm:5.28.0"
@@ -940,6 +965,17 @@ __metadata:
   languageName: node
   linkType: hard
 
+"babel-helper-builder-react-jsx@npm:^6.24.1":
+  version: 6.26.0
+  resolution: "babel-helper-builder-react-jsx@npm:6.26.0"
+  dependencies:
+    babel-runtime: ^6.26.0
+    babel-types: ^6.26.0
+    esutils: ^2.0.2
+  checksum: 1a2c4ab7aea9236ccaa874e41702508383f58418cd8a210259240b537a21764c152a64bcd183ad2d141a4b643651116ffab25994470ff01771d456ff865d6d72
+  languageName: node
+  linkType: hard
+
 "babel-loader@npm:^8.2.5":
   version: 8.2.5
   resolution: "babel-loader@npm:8.2.5"
@@ -966,6 +1002,46 @@ __metadata:
   version: 1.1.0
   resolution: "babel-plugin-remove-webpack@npm:1.1.0"
   checksum: c1edb0a0331c074e2e677261741be2cde13562a8c6eb3318869de5c7e30377ec2f8862e3c9e354f771031d462e884e550d04fa7c60582ddb335c544cb6c3eed9
+  languageName: node
+  linkType: hard
+
+"babel-plugin-syntax-jsx@npm:^6.8.0":
+  version: 6.18.0
+  resolution: "babel-plugin-syntax-jsx@npm:6.18.0"
+  checksum: 0c7ce5b81d6cfc01a7dd7a76a9a8f090ee02ba5c890310f51217ef1a7e6163fb7848994bbc14fd560117892e82240df9c7157ad0764da67ca5f2afafb73a7d27
+  languageName: node
+  linkType: hard
+
+"babel-plugin-transform-react-jsx@npm:^6.24.1":
+  version: 6.24.1
+  resolution: "babel-plugin-transform-react-jsx@npm:6.24.1"
+  dependencies:
+    babel-helper-builder-react-jsx: ^6.24.1
+    babel-plugin-syntax-jsx: ^6.8.0
+    babel-runtime: ^6.22.0
+  checksum: fa91aeda9cdcb33d28c4757ebf302430173a854a833e17a5acdd66442247c38e815ee4ae8d4a44b44a7238bca0c04b4794a61fe2372b88ee668e260b51aa2544
+  languageName: node
+  linkType: hard
+
+"babel-runtime@npm:^6.22.0, babel-runtime@npm:^6.26.0":
+  version: 6.26.0
+  resolution: "babel-runtime@npm:6.26.0"
+  dependencies:
+    core-js: ^2.4.0
+    regenerator-runtime: ^0.11.0
+  checksum: 8aeade94665e67a73c1ccc10f6fd42ba0c689b980032b70929de7a6d9a12eb87ef51902733f8fefede35afea7a5c3ef7e916a64d503446c1eedc9e3284bd3d50
+  languageName: node
+  linkType: hard
+
+"babel-types@npm:^6.26.0":
+  version: 6.26.0
+  resolution: "babel-types@npm:6.26.0"
+  dependencies:
+    babel-runtime: ^6.26.0
+    esutils: ^2.0.2
+    lodash: ^4.17.4
+    to-fast-properties: ^1.0.3
+  checksum: d16b0fa86e9b0e4c2623be81d0a35679faff24dd2e43cde4ca58baf49f3e39415a011a889e6c2259ff09e1228e4c3a3db6449a62de59e80152fe1ce7398fde76
   languageName: node
   linkType: hard
 
@@ -1171,6 +1247,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"core-js@npm:^2.4.0":
+  version: 2.6.12
+  resolution: "core-js@npm:2.6.12"
+  checksum: 44fa9934a85f8c78d61e0c8b7b22436330471ffe59ec5076fe7f324d6e8cf7f824b14b1c81ca73608b13bdb0fef035bd820989bf059767ad6fa13123bb8bd016
+  languageName: node
+  linkType: hard
+
 "create-require@npm:^1.1.0":
   version: 1.1.1
   resolution: "create-require@npm:1.1.1"
@@ -1186,6 +1269,13 @@ __metadata:
     shebang-command: ^2.0.0
     which: ^2.0.1
   checksum: 671cc7c7288c3a8406f3c69a3ae2fc85555c04169e9d611def9a675635472614f1c0ed0ef80955d5b6d4e724f6ced67f0ad1bb006c2ea643488fcfef994d7f52
+  languageName: node
+  linkType: hard
+
+"csstype@npm:^3.0.2":
+  version: 3.1.0
+  resolution: "csstype@npm:3.1.0"
+  checksum: 644e986cefab86525f0b674a06889cfdbb1f117e5b7d1ce0fc55b0423ecc58807a1ea42ecc75c4f18999d14fc42d1d255f84662a45003a52bb5840e977eb2ffd
   languageName: node
   linkType: hard
 
@@ -2525,7 +2615,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash@npm:^4.17.21":
+"lodash@npm:^4.17.21, lodash@npm:^4.17.4":
   version: 4.17.21
   resolution: "lodash@npm:4.17.21"
   checksum: eb835a2e51d381e561e508ce932ea50a8e5a68f4ebdd771ea240d3048244a8d13658acbd502cd4829768c56f2e16bdd4340b9ea141297d472517b83868e677f7
@@ -3012,6 +3102,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"regenerator-runtime@npm:^0.11.0":
+  version: 0.11.1
+  resolution: "regenerator-runtime@npm:0.11.1"
+  checksum: 3c97bd2c7b2b3247e6f8e2147a002eb78c995323732dad5dc70fac8d8d0b758d0295e7015b90d3d444446ae77cbd24b9f9123ec3a77018e81d8999818301b4f4
+  languageName: node
+  linkType: hard
+
 "regenerator-runtime@npm:^0.13.4":
   version: 0.13.9
   resolution: "regenerator-runtime@npm:0.13.9"
@@ -3392,6 +3489,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"tabler-icons-react@npm:1.48.1":
+  version: 1.48.1
+  resolution: "tabler-icons-react@npm:1.48.1"
+  peerDependencies:
+    react: ">= 16.8.0"
+  checksum: 2d92fd25f3bae4acb9c440c3582af64b597c0d8c9f6aa30af80532dc28c32b80ff08c60c2611b0bb47a65e64f480874989173a48d91e3a54ecef6d151ae841bd
+  languageName: node
+  linkType: hard
+
 "tapable@npm:^2.1.1, tapable@npm:^2.2.0":
   version: 2.2.1
   resolution: "tapable@npm:2.2.1"
@@ -3439,6 +3545,13 @@ __metadata:
   version: 0.2.0
   resolution: "text-table@npm:0.2.0"
   checksum: b6937a38c80c7f84d9c11dd75e49d5c44f71d95e810a3250bd1f1797fc7117c57698204adf676b71497acc205d769d65c16ae8fa10afad832ae1322630aef10a
+  languageName: node
+  linkType: hard
+
+"to-fast-properties@npm:^1.0.3":
+  version: 1.0.3
+  resolution: "to-fast-properties@npm:1.0.3"
+  checksum: bd0abb58c4722851df63419de3f6d901d5118f0440d3f71293ed776dd363f2657edaaf2dc470e3f6b7b48eb84aa411193b60db8a4a552adac30de9516c5cc580
   languageName: node
   linkType: hard
 
@@ -3566,15 +3679,18 @@ __metadata:
     "@slashnephy/eslint-config": 0.1.3
     "@slashnephy/prettier-config": 0.1.1
     "@types/node": 17.0.41
+    "@types/react": 18.0.12
     "@types/webpack": 5.28.0
     babel-loader: ^8.2.5
     babel-plugin-dynamic-import-webpack: ^1.1.0
     babel-plugin-remove-webpack: ^1.1.0
+    babel-plugin-transform-react-jsx: ^6.24.1
     concurrently: 7.2.1
     discord-api-types: 0.33.5
     eslint: 8.17.0
     node-fetch: 3.2.5
     prettier: 2.6.2
+    tabler-icons-react: 1.48.1
     ts-loader: 9.3.0
     ts-node: 10.8.1
     typescript: 4.7.3

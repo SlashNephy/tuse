@@ -8,7 +8,7 @@ import type { Configuration } from 'webpack'
 
 const srcDir = resolve(__dirname, 'src')
 const projects = readdirSync(srcDir).map(
-  (name) => [name, resolve(srcDir, name, 'index.ts')] as [string, string]
+  (name) => [name, resolve(srcDir, name, 'index.tsx')] as [string, string]
 )
 
 const outputDir = resolve(__dirname, '..', 'app', 'plugins')
@@ -25,18 +25,23 @@ const config: Configuration = {
     filename: '[name].js',
     libraryTarget: 'commonjs2',
   },
+  externals: ['react'],
   module: {
     rules: [
       {
-        test: /\.ts$/,
+        test: /\.tsx$/,
         use: 'ts-loader',
       },
       {
-        test: /\.js$/,
+        test: /\.jsx?$/,
         include: outputDir,
         loader: 'babel-loader',
         options: {
-          plugins: ['dynamic-import-webpack', 'remove-webpack'],
+          plugins: [
+            'dynamic-import-webpack',
+            'remove-webpack',
+            'transform-react-jsx',
+          ],
         },
       },
     ],
@@ -54,7 +59,7 @@ const config: Configuration = {
     ],
   },
   resolve: {
-    extensions: ['.ts', '.js'],
+    extensions: ['.ts', '.tsx', '.js', '.jsx'],
   },
 }
 
