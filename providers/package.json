@@ -48,7 +48,7 @@
     "overrides": [
       {
         "files": [
-          "src/*/index.ts"
+          "src/*/index.{ts,tsx}"
         ],
         "rules": {
           "import/no-default-export": "off"
