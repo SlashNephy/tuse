@@ -1,4 +1,5 @@
 import {
+  Anchor,
   Center,
   Container,
   Loader,
@@ -42,7 +43,14 @@ const Home: NextPage<{ title: string }> = ({ title }) => {
 
       <Container>
         <Center>
-          <Title>{title}</Title>
+          <Anchor
+            href="https://github.com/SlashNephy/tuse"
+            underline={false}
+            target="_blank"
+            style={{ color: 'black' }}
+          >
+            <Title>{title}</Title>
+          </Anchor>
         </Center>
 
         <TextInput

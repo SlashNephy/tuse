@@ -13,7 +13,7 @@ const projects = readdirSync(srcDir).map(
 
 const outputDir = resolve(__dirname, '..', 'app', 'plugins')
 if (!existsSync(outputDir)) {
-  mkdirSync(outputDir)
+  mkdirSync(outputDir, { recursive: true })
 }
 
 const config: Configuration = {
