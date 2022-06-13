@@ -11,7 +11,7 @@ import {
 import '@slashnephy/typescript-extension'
 import React from 'react'
 
-import type { SearchResultProps } from './props'
+import type { SearchResultProps } from '../lib/useSearch'
 
 export const SearchResultTabs: React.FC<{ search: SearchResultProps }> = ({
   search,

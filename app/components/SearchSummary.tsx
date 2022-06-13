@@ -1,7 +1,7 @@
 import { Text } from '@mantine/core'
 import React from 'react'
 
-import type { SearchResultProps } from './props'
+import type { SearchResultProps } from '../lib/useSearch'
 
 export const SearchSummary: React.FC<{ search: SearchResultProps }> = ({
   search: { count, query, seconds },

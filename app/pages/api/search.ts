@@ -9,14 +9,12 @@ import type { NextApiHandler, NextApiRequest } from 'next'
 export type SearchResponse =
   | {
       success: true
-      elapsed: number
       results: {
         [type in string]: ClientSearchResult[]
       }
     }
   | {
       success: false
-      elapsed: number
       error: string
     }
 
@@ -28,13 +26,10 @@ type CacheState = {
 const cache = new Map<string, CacheState>()
 
 const handler: NextApiHandler<SearchResponse> = async (request, response) => {
-  const start = Date.now()
-
   const query = parseRequestQuery(request, 'q')
   if (!query) {
     return response.status(400).json({
       success: false,
-      elapsed: Date.now() - start,
       error: 'Query parameter "q" is required.',
     })
   }
@@ -47,7 +42,6 @@ const handler: NextApiHandler<SearchResponse> = async (request, response) => {
       state = {
         response: {
           success: true,
-          elapsed: Date.now() - start,
           results: await search(query, sort),
         },
         expiresAt: addHours(new Date(), 1),
@@ -57,9 +51,7 @@ const handler: NextApiHandler<SearchResponse> = async (request, response) => {
 
     response.status(200).json(state.response)
   } catch (error) {
-    return response
-      .status(500)
-      .json({ success: false, elapsed: Date.now() - start, error: `${error}` })
+    return response.status(500).json({ success: false, error: `${error}` })
   }
 }
 
