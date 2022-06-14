@@ -1,5 +1,7 @@
 import { REST } from '@discordjs/rest'
 import { Routes } from 'discord-api-types/v10'
+import React from 'react'
+import { BrandDiscord } from 'tabler-icons-react'
 
 import type {
   ISearchPlugin,
@@ -8,8 +10,6 @@ import type {
   SearchSort,
 } from '../../plugin'
 import type { APIGuildMember } from 'discord-api-types/v10'
-import * as React from 'react'
-import { BrandDiscord } from 'tabler-icons-react'
 
 export default class DiscordMembersSearchPlugin
   implements ISearchPlugin<'discord.members'>

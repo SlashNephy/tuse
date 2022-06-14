@@ -1,4 +1,6 @@
 import { Octokit } from '@octokit/rest'
+import React from 'react'
+import { BrandGithub } from 'tabler-icons-react'
 
 import type {
   ISearchPlugin,
@@ -7,8 +9,6 @@ import type {
   SearchSort,
 } from '../../plugin'
 import type { operations } from '@octokit/openapi-types'
-import * as React from 'react'
-import { BrandGithub } from 'tabler-icons-react'
 
 export default class GitHubCommitsSearchPlugin
   implements ISearchPlugin<'github.commits'>

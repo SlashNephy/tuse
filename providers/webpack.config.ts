@@ -29,7 +29,7 @@ const config: Configuration = {
   module: {
     rules: [
       {
-        test: /\.tsx$/,
+        test: /\.tsx?$/,
         use: 'ts-loader',
       },
       {

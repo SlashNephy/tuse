@@ -1,4 +1,6 @@
 import { REST } from '@discordjs/rest'
+import React from 'react'
+import { BrandDiscord } from 'tabler-icons-react'
 
 import type {
   ISearchPlugin,
@@ -9,8 +11,6 @@ import type {
 import type { RouteLike } from '@discordjs/rest'
 import type { APIGuildMember } from 'discord-api-types/v10'
 import type { APIMessage, APIThreadChannel } from 'discord-api-types/v9'
-import { BrandDiscord } from 'tabler-icons-react'
-import * as React from 'react'
 
 export default class DiscordMessagesSearchPlugin
   implements ISearchPlugin<'discord.messages'>

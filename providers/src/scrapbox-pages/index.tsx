@@ -1,11 +1,12 @@
+import React from 'react'
+import { Notes } from 'tabler-icons-react'
+
 import type {
   SearchResult,
   SearchSort,
   ISearchPlugin,
   PluginConfig,
 } from '../../plugin'
-import * as React from 'react'
-import { Notes } from 'tabler-icons-react'
 
 export default class ScrapboxPagesSearchPlugin
   implements ISearchPlugin<'scrapbox.pages'>
