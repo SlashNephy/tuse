@@ -21,7 +21,6 @@ COPY ./providers/package.json ./providers/.yarnrc.yml ./providers/yarn.lock ./
 RUN yarn --immutable
 
 FROM --platform=$BUILDPLATFORM node:18.3.0-bullseye-slim AS build-providers
-ENV NEXT_TELEMETRY_DISABLED=1
 WORKDIR /providers
 
 COPY --from=cache-providers /providers/node_modules/ ./node_modules/
@@ -32,6 +31,7 @@ FROM --platform=$TARGETPLATFORM node:18.3.0-bullseye-slim AS runtime
 ENV NODE_ENV="production"
 ENV PORT=3000
 ENV NEXT_TELEMETRY_DISABLED=1
+ENV TUSE_PLUGINS_DIR="/app/plugins"
 WORKDIR /app
 USER node
 
