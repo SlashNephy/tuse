@@ -81,7 +81,11 @@ const loadPluginConfig = async (
   pluginsDir: string,
   pluginFile: string
 ): Promise<PluginConfig> => {
-  const path = resolve(pluginsDir, pluginFile.replace(/\.js$/, '.config.json'))
+  const path = resolve(
+    pluginsDir,
+    'config',
+    pluginFile.replace(/\.js$/, '.json')
+  )
 
   let config: PluginConfig
   if (await existsAsync(path)) {
