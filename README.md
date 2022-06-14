@@ -2,20 +2,8 @@
 
 🔍 Team Universal Search Engine
 
-Discord / GitHub などから横断検索するシンプルな検索エンジンです。チームや小規模コミュニティー内での運用を想定しています。
-
-## 対応サービス
-
-- GitHub (WIP)
-  - コミット
-  - リポジトリ
-  - Issue / PR
-  - メンバー
-- Discord
-  - メンバー
-  - メッセージ
-    - Discord API の仕様により、ユーザートークンが必要です (Bot アカウントでは動作しません)。
-- Scrapbox (TODO)
+さまざまなサービスから横断検索できる、シンプルな検索エンジンです。チームや小規模コミュニティー内での運用を想定しています。  
+[プラグインシステム](https://github.com/SlashNephy/tuse/blob/master/providers) を導入しており、対象の検索ソースを増やすことができます。
 
 ## Getting Started
 
@@ -25,6 +13,26 @@ Discord / GitHub などから横断検索するシンプルな検索エンジン
 $ cp .env.example .env
 $ code .env
 ```
+
+### Docker
+
+`docker-compose.yml` を用意します。`docker compose up` で起動します。
+
+```yaml
+version: '3.8'
+
+services:
+  app:
+    image: ghcr.io/slashnephy/tuse:master
+    restart: always
+    volumes:
+      - ./.env:/app/.env:ro
+      - ./config:/app/plugins/config:ro
+    ports:
+      - '3000:3000/tcp'
+```
+
+### Development
 
 開発サーバーは以下のコマンドで起動します。http://localhost:3000 にサーバーが起動します。
 
