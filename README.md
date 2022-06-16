@@ -5,6 +5,8 @@
 さまざまなサービスから横断検索できる、シンプルな検索エンジンです。チームや小規模コミュニティー内での運用を想定しています。  
 [プラグインシステム](https://github.com/SlashNephy/tuse/blob/master/providers) を導入しており、対象の検索ソースを増やすことができます。
 
+![](https://raw.githubusercontent.com/SlashNephy/tuse/master/docs/screenshot1.png)
+
 ## Getting Started
 
 `.env.example` を参考に環境変数を設定します。
