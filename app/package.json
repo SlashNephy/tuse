@@ -31,7 +31,7 @@
     "@slashnephy/eslint-config": "0.1.6",
     "@slashnephy/prettier-config": "0.1.1",
     "@types/node": "17.0.31",
-    "@types/react": "18.0.12",
+    "@types/react": "18.0.14",
     "@types/react-dom": "18.0.5",
     "concurrently": "7.2.1",
     "dts-bundle-generator": "6.11.0",
