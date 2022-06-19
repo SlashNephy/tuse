@@ -16,7 +16,7 @@
     "format:prettier": "yarn lint:prettier --write"
   },
   "dependencies": {
-    "@mantine/core": "4.2.8",
+    "@mantine/core": "4.2.10",
     "@mantine/hooks": "4.2.8",
     "@mantine/next": "4.2.8",
     "@slashnephy/typescript-extension": "0.1.1",
