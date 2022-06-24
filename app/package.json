@@ -25,7 +25,7 @@
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-query": "3.39.1",
-    "tabler-icons-react": "1.50.0"
+    "tabler-icons-react": "1.51.0"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.1.6",

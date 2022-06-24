@@ -3573,12 +3573,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tabler-icons-react@npm:1.50.0":
-  version: 1.50.0
-  resolution: "tabler-icons-react@npm:1.50.0"
+"tabler-icons-react@npm:1.51.0":
+  version: 1.51.0
+  resolution: "tabler-icons-react@npm:1.51.0"
   peerDependencies:
     react: ">= 16.8.0"
-  checksum: a8e785f29c8f55f8fa16ecdbe9047cbacf206d83e146aedccbfeb376249606fb9cd821a5c322b28ffceb42dd475cd31a5d7a6adb6d543f1bb914a9219c9b11de
+  checksum: ae3ee22e6e4c690e1241c8c482eff49015219e662c1ab40d01de71e2efe8969750e91bf3efbdc39bec20d52faff5a59d7a236337507929426ccc79305d8c73b9
   languageName: node
   linkType: hard
 
@@ -3774,7 +3774,7 @@ __metadata:
     eslint: 8.18.0
     node-fetch: 3.2.6
     prettier: 2.7.1
-    tabler-icons-react: 1.50.0
+    tabler-icons-react: 1.51.0
     ts-loader: 9.3.1
     ts-node: 10.8.1
     typescript: 4.7.4
