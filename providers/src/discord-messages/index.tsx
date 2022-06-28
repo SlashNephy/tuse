@@ -68,7 +68,7 @@ export default class DiscordMessagesSearchPlugin
   private intoSearchResult(
     message: APIMessage
   ): SearchResult<'discord.messages'> {
-    const avatarHash = message.member?.avatar || message.author.avatar
+    const avatarHash = message.author?.avatar
 
     return {
       type: 'discord.messages',

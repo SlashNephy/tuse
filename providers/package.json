@@ -22,7 +22,7 @@
     "tabler-icons-react": "1.51.0"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.1.6",
+    "@slashnephy/eslint-config": "0.1.7",
     "@slashnephy/prettier-config": "0.1.1",
     "@types/node": "17.0.41",
     "@types/react": "18.0.14",
@@ -52,15 +52,6 @@
         ],
         "rules": {
           "import/no-default-export": "off"
-        }
-      },
-      {
-        "files": [
-          "webpack.config.ts"
-        ],
-        "rules": {
-          "node/no-extraneous-import": "off",
-          "node/no-unpublished-import": "off"
         }
       }
     ]

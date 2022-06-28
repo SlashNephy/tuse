@@ -28,7 +28,7 @@
     "tabler-icons-react": "1.51.0"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.1.6",
+    "@slashnephy/eslint-config": "0.1.7",
     "@slashnephy/prettier-config": "0.1.1",
     "@types/node": "17.0.31",
     "@types/react": "18.0.14",
@@ -43,11 +43,7 @@
   "eslintConfig": {
     "extends": [
       "@slashnephy/eslint-config"
-    ],
-    "rules": {
-      "@typescript-eslint/no-unsafe-member-access": "off",
-      "@typescript-eslint/no-unsafe-call": "off"
-    }
+    ]
   },
   "engines": {
     "node": ">=18.0.0"
