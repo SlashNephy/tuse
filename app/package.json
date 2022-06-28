@@ -48,5 +48,8 @@
       "@typescript-eslint/no-unsafe-member-access": "off",
       "@typescript-eslint/no-unsafe-call": "off"
     }
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }

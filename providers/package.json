@@ -53,7 +53,19 @@
         "rules": {
           "import/no-default-export": "off"
         }
+      },
+      {
+        "files": [
+          "webpack.config.ts"
+        ],
+        "rules": {
+          "node/no-extraneous-import": "off",
+          "node/no-unpublished-import": "off"
+        }
       }
     ]
+  },
+  "engines": {
+    "node": ">=18.0.0"
   }
 }
