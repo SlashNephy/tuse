@@ -590,12 +590,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/typescript-extension@npm:0.2.1":
-  version: 0.2.1
-  resolution: "@slashnephy/typescript-extension@npm:0.2.1"
+"@slashnephy/typescript-extension@npm:0.2.2":
+  version: 0.2.2
+  resolution: "@slashnephy/typescript-extension@npm:0.2.2"
   peerDependencies:
     typescript: ^4
-  checksum: 5e5cc03d9e9f32a02fbfb10e7e558f0b908ec539529ac12cfed0c6e219068fa1dd3add35da79b867b7112dd4827f560ea69e80505c6c63d78e212dea947fee4a
+  checksum: efd61c71af901ba92c31234875880dad91e3be2429f0fd87f4e1183ceb9cb6aef6309a4ef3377045afd66cf2f55611dbdd2e9910afecd4480452965b449e7291
   languageName: node
   linkType: hard
 
@@ -3760,7 +3760,7 @@ __metadata:
     "@mantine/next": 4.2.11
     "@slashnephy/eslint-config": 0.1.7
     "@slashnephy/prettier-config": 0.1.1
-    "@slashnephy/typescript-extension": 0.2.1
+    "@slashnephy/typescript-extension": 0.2.2
     "@types/node": 17.0.31
     "@types/react": 18.0.14
     "@types/react-dom": 18.0.5
