@@ -19,7 +19,7 @@
     "@mantine/core": "4.2.11",
     "@mantine/hooks": "4.2.11",
     "@mantine/next": "4.2.11",
-    "@slashnephy/typescript-extension": "0.2.2",
+    "@slashnephy/typescript-extension": "0.2.3",
     "date-fns": "2.28.0",
     "next": "12.2.0",
     "react": "18.2.0",
