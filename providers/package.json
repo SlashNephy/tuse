@@ -19,7 +19,7 @@
     "@octokit/rest": "19.0.3",
     "discord-api-types": "0.36.2",
     "node-fetch": "3.2.6",
-    "tabler-icons-react": "1.52.0"
+    "tabler-icons-react": "1.53.0"
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.1.7",
