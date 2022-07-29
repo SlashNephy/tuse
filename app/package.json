@@ -20,7 +20,7 @@
     "@mantine/hooks": "4.2.12",
     "@mantine/next": "4.2.12",
     "@slashnephy/typescript-extension": "0.2.3",
-    "date-fns": "2.28.0",
+    "date-fns": "2.29.1",
     "next": "12.2.3",
     "react": "18.2.0",
     "react-dom": "18.2.0",
