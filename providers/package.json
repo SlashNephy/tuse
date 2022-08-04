@@ -18,7 +18,7 @@
     "@discordjs/rest": "0.6.0",
     "@octokit/rest": "19.0.3",
     "discord-api-types": "0.37.0",
-    "node-fetch": "3.2.9",
+    "node-fetch": "3.2.10",
     "tabler-icons-react": "1.54.0"
   },
   "devDependencies": {
