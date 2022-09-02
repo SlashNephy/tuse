@@ -67,5 +67,4 @@ const parseRequestQuery = <T = string>(
   return typeof value === 'string' ? (value as unknown as T) : null
 }
 
-
 export default handler
