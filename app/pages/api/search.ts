@@ -67,5 +67,5 @@ const parseRequestQuery = <T = string>(
   return typeof value === 'string' ? (value as unknown as T) : null
 }
 
-// eslint-disable-next-line import/no-default-export
+
 export default handler
