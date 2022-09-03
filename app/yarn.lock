@@ -568,9 +568,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:0.1.13":
-  version: 0.1.13
-  resolution: "@slashnephy/eslint-config@npm:0.1.13"
+"@slashnephy/eslint-config@npm:0.1.14":
+  version: 0.1.14
+  resolution: "@slashnephy/eslint-config@npm:0.1.14"
   dependencies:
     "@typescript-eslint/eslint-plugin": 5.36.1
     "@typescript-eslint/parser": 5.33.0
@@ -594,7 +594,7 @@ __metadata:
     eslint: ^8
     prettier: ^2
     typescript: ^4
-  checksum: cb5bb62fd272f232639ce70416b288f53ec1abbc67d3868094e28e351c37fc2216f4ef6783da5f06a5d311e094821800549ffea67efdeb72a9da6b006af8b14e
+  checksum: c0cec0989aba3fb33419baf6af3cc5edc130dc3eaddbc85fc153bb003d55f561278991e11654e1917d5437c44145807cdca9e0d51c326ed1450e361898144a2a
   languageName: node
   linkType: hard
 
@@ -3987,7 +3987,7 @@ __metadata:
     "@mantine/core": 4.2.12
     "@mantine/hooks": 4.2.12
     "@mantine/next": 4.2.12
-    "@slashnephy/eslint-config": 0.1.13
+    "@slashnephy/eslint-config": 0.1.14
     "@slashnephy/prettier-config": 0.1.1
     "@slashnephy/typescript-extension": 0.2.3
     "@types/node": 17.0.31
