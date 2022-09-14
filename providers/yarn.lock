@@ -424,9 +424,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@slashnephy/eslint-config@npm:0.2.3":
-  version: 0.2.3
-  resolution: "@slashnephy/eslint-config@npm:0.2.3"
+"@slashnephy/eslint-config@npm:0.2.4":
+  version: 0.2.4
+  resolution: "@slashnephy/eslint-config@npm:0.2.4"
   dependencies:
     "@typescript-eslint/eslint-plugin": 5.37.0
     "@typescript-eslint/parser": 5.37.0
@@ -453,7 +453,7 @@ __metadata:
     eslint: ^8
     prettier: ^2
     typescript: ^4
-  checksum: 9271a2ae84f5dfe74cfcbe0340cd33eb0d3037b1410d3ff04e09662f1b831a2c9d3d56f9076e2784141647d73d518442ce50245782443f3cb82be1ab7208ed3b
+  checksum: 9f3581538c30603c63faa9fcc7dbb935bce4a16e3d753c617bceffebe2be15a8446c1523f2b848effd142a8068f72a6a970e74bfaa1cb7b535c82df0bf1a046c
   languageName: node
   linkType: hard
 
@@ -4452,7 +4452,7 @@ __metadata:
   dependencies:
     "@discordjs/rest": 0.6.0
     "@octokit/rest": 19.0.4
-    "@slashnephy/eslint-config": 0.2.3
+    "@slashnephy/eslint-config": 0.2.4
     "@slashnephy/prettier-config": 0.1.1
     "@types/node": 17.0.41
     "@types/react": 18.0.20
