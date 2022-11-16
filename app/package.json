@@ -42,7 +42,7 @@
   "resolutions": {
     "@types/react": "18.0.25"
   },
-  "packageManager": "yarn@3.2.2",
+  "packageManager": "yarn@3.3.0",
   "eslintConfig": {
     "extends": [
       "@slashnephy/eslint-config"
