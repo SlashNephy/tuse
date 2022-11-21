@@ -1473,15 +1473,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dts-bundle-generator@npm:7.0.0":
-  version: 7.0.0
-  resolution: "dts-bundle-generator@npm:7.0.0"
+"dts-bundle-generator@npm:7.1.0":
+  version: 7.1.0
+  resolution: "dts-bundle-generator@npm:7.1.0"
   dependencies:
     typescript: ">=4.5.2"
     yargs: ^17.6.0
   bin:
     dts-bundle-generator: dist/bin/dts-bundle-generator.js
-  checksum: e48a70ae66be43a796a116e84e7e18c743c6efbe18d7111420956597b07a7aa33107c55fdeb4d52f3f7d36a6e0b853140b46d9d7f0af77254ed067e32f81a947
+  checksum: 120c6b0724da0d91076714f45a27ff62776e1b64319e0dfd7a88fb28e6bf0b47bced738ecb25380dfb0afdf5232ce48ac6a2aaeef90da867810c00012321d9ba
   languageName: node
   linkType: hard
 
@@ -4171,7 +4171,7 @@ __metadata:
     "@types/react-dom": 18.0.9
     concurrently: 7.6.0
     date-fns: 2.29.3
-    dts-bundle-generator: 7.0.0
+    dts-bundle-generator: 7.1.0
     eslint: 8.28.0
     next: 12.3.2
     prettier: 2.7.1
