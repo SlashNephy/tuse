@@ -24,7 +24,7 @@
   "devDependencies": {
     "@slashnephy/eslint-config": "0.2.30",
     "@slashnephy/prettier-config": "0.1.1",
-    "@types/node": "18.11.17",
+    "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/webpack": "5.28.0",
     "babel-loader": "9.1.0",
