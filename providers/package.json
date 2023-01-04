@@ -27,7 +27,7 @@
     "@types/node": "18.11.18",
     "@types/react": "18.0.26",
     "@types/webpack": "5.28.0",
-    "babel-loader": "9.1.0",
+    "babel-loader": "9.1.2",
     "babel-plugin-dynamic-import-webpack": "1.1.0",
     "babel-plugin-remove-webpack": "1.1.0",
     "babel-plugin-transform-react-jsx": "6.24.1",
