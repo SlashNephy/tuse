@@ -23,7 +23,7 @@
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "0.2.43",
-    "@slashnephy/prettier-config": "0.1.14",
+    "@slashnephy/prettier-config": "0.1.15",
     "@types/node": "18.14.1",
     "@types/react": "18.0.28",
     "@types/webpack": "5.28.0",
