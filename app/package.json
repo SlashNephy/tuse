@@ -28,7 +28,7 @@
     "tabler-icons-react": "1.55.0"
   },
   "devDependencies": {
-    "@slashnephy/eslint-config": "0.3.6",
+    "@slashnephy/eslint-config": "0.3.8",
     "@slashnephy/prettier-config": "0.1.16",
     "@types/node": "18.15.0",
     "@types/react": "18.0.28",
