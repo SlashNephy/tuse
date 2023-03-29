@@ -33,7 +33,7 @@
     "@types/node": "18.15.11",
     "@types/react": "18.0.31",
     "@types/react-dom": "18.0.11",
-    "concurrently": "7.6.0",
+    "concurrently": "8.0.1",
     "dts-bundle-generator": "7.2.0",
     "eslint": "8.37.0",
     "prettier": "2.8.7",
