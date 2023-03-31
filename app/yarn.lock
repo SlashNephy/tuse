@@ -1766,15 +1766,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"dts-bundle-generator@npm:7.2.0":
-  version: 7.2.0
-  resolution: "dts-bundle-generator@npm:7.2.0"
+"dts-bundle-generator@npm:8.0.0":
+  version: 8.0.0
+  resolution: "dts-bundle-generator@npm:8.0.0"
   dependencies:
-    typescript: ">=4.5.2"
+    typescript: ">=5.0.2"
     yargs: ^17.6.0
   bin:
     dts-bundle-generator: dist/bin/dts-bundle-generator.js
-  checksum: 0f00792b604873f2c9fe59b5bb279b9592404c8c5a598a7b188269e98ad472b383b5e571c5b1dce2558821fb003ab39b32d12f89f1b48502fc9473d01d61a1e0
+  checksum: fd806f275be633bc59645c2ed209759c896e1749b97287bc23b43cad3c2b4c5dcd8fb7594b6f7d86d93b1ea17eb3fa091fe146b2b64ca8532327b05d968ff6b9
   languageName: node
   linkType: hard
 
@@ -5085,7 +5085,7 @@ __metadata:
     "@types/react-dom": 18.0.11
     concurrently: 8.0.1
     date-fns: 2.29.3
-    dts-bundle-generator: 7.2.0
+    dts-bundle-generator: 8.0.0
     eslint: 8.37.0
     next: 12.3.4
     prettier: 2.8.7
@@ -5123,23 +5123,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:5.0.3":
+"typescript@npm:5.0.3, typescript@npm:>=5.0.2":
   version: 5.0.3
   resolution: "typescript@npm:5.0.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 3cce0576d218cb4277ff8b6adfef1a706e9114a98b4261a38ad658a7642f1b274a8396394f6cbff8c0ba852996d7ed2e233e9b8431d5d55ac7c2f6fea645af02
-  languageName: node
-  linkType: hard
-
-"typescript@npm:>=4.5.2":
-  version: 4.8.4
-  resolution: "typescript@npm:4.8.4"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 3e4f061658e0c8f36c820802fa809e0fd812b85687a9a2f5430bc3d0368e37d1c9605c3ce9b39df9a05af2ece67b1d844f9f6ea8ff42819f13bcb80f85629af0
   languageName: node
   linkType: hard
 
@@ -5153,23 +5143,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@5.0.3#~builtin<compat/typescript>":
+"typescript@patch:typescript@5.0.3#~builtin<compat/typescript>, typescript@patch:typescript@>=5.0.2#~builtin<compat/typescript>":
   version: 5.0.3
   resolution: "typescript@patch:typescript@npm%3A5.0.3#~builtin<compat/typescript>::version=5.0.3&hash=d73830"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 9ec0a8eed38d46cc2c8794555b7674e413604c56c159f71b8ff21ce7f17334a44127a68724cb2ef8221ff3b19369f8f05654e8a5266621d7d962aeed889bd630
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@>=4.5.2#~builtin<compat/typescript>":
-  version: 4.8.4
-  resolution: "typescript@patch:typescript@npm%3A4.8.4#~builtin<compat/typescript>::version=4.8.4&hash=0102e9"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 301459fc3eb3b1a38fe91bf96d98eb55da88a9cb17b4ef80b4d105d620f4d547ba776cc27b44cc2ef58b66eda23fe0a74142feb5e79a6fb99f54fc018a696afa
   languageName: node
   linkType: hard
 
