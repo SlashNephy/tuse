@@ -31,7 +31,7 @@
     "@slashnephy/eslint-config": "0.4.14",
     "@slashnephy/prettier-config": "0.1.16",
     "@types/node": "18.15.11",
-    "@types/react": "18.0.35",
+    "@types/react": "18.0.37",
     "@types/react-dom": "18.0.11",
     "concurrently": "8.0.1",
     "dts-bundle-generator": "8.0.1",
@@ -40,7 +40,7 @@
     "typescript": "5.0.4"
   },
   "resolutions": {
-    "@types/react": "18.0.35"
+    "@types/react": "18.0.37"
   },
   "packageManager": "yarn@3.5.0",
   "eslintConfig": {
