@@ -35,7 +35,7 @@
     "@types/react-dom": "18.0.11",
     "concurrently": "8.0.1",
     "dts-bundle-generator": "8.0.1",
-    "eslint": "8.38.0",
+    "eslint": "8.39.0",
     "prettier": "2.8.7",
     "typescript": "5.0.4"
   },
