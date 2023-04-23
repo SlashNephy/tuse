@@ -36,7 +36,7 @@
     "concurrently": "8.0.1",
     "dts-bundle-generator": "8.0.1",
     "eslint": "8.39.0",
-    "prettier": "2.8.7",
+    "prettier": "2.8.8",
     "typescript": "5.0.4"
   },
   "resolutions": {
