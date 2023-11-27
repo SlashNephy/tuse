@@ -29,7 +29,7 @@
   },
   "devDependencies": {
     "@slashnephy/eslint-config": "2.0.69",
-    "@slashnephy/prettier-config": "1.0.50",
+    "@slashnephy/prettier-config": "1.0.51",
     "@types/node": "18.16.7",
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
