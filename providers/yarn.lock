@@ -2372,10 +2372,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"discord-api-types@npm:0.37.20":
-  version: 0.37.20
-  resolution: "discord-api-types@npm:0.37.20"
-  checksum: 88ebed85aada3483e83ac46a1b4574c0d59948060ac72f451d658fa646b20d62bd6f21792043621dcc5a9e9353d95c25de70646b8d2a93f0022154345800b26c
+"discord-api-types@npm:0.37.76":
+  version: 0.37.76
+  resolution: "discord-api-types@npm:0.37.76"
+  checksum: a96f21875a294f2c5f2bc3cfe21748f29b91c7843288f40b3ba686db75cf84b72309113d8074c58af8071405e3ac3abdbebd253bcd1dc899049cdf086ba8303b
   languageName: node
   linkType: hard
 
@@ -6452,7 +6452,7 @@ __metadata:
     babel-plugin-remove-webpack: 1.1.0
     babel-plugin-transform-react-jsx: 6.24.1
     concurrently: 8.0.1
-    discord-api-types: 0.37.20
+    discord-api-types: 0.37.76
     eslint: 8.40.0
     node-fetch: 3.3.0
     prettier: 2.8.8
