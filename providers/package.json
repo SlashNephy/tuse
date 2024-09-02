@@ -15,7 +15,7 @@
     "format:prettier": "yarn lint:prettier --write"
   },
   "dependencies": {
-    "@discordjs/rest": "0.6.0",
+    "@discordjs/rest": "2.4.0",
     "@octokit/rest": "19.0.5",
     "discord-api-types": "0.37.20",
     "node-fetch": "3.3.0",
