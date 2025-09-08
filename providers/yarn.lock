@@ -5989,6 +5989,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"source-map@npm:^0.7.4":
+  version: 0.7.6
+  resolution: "source-map@npm:0.7.6"
+  checksum: 932f4a2390aa7100e91357d88cc272de984ad29139ac09eedfde8cc78d46da35f389065d0c5343c5d71d054a6ebd4939a8c0f2c98d5df64fe97bb8a730596c2d
+  languageName: node
+  linkType: hard
+
 "spawn-command@npm:0.0.2-1":
   version: 0.0.2-1
   resolution: "spawn-command@npm:0.0.2-1"
@@ -6327,18 +6334,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-loader@npm:9.4.2":
-  version: 9.4.2
-  resolution: "ts-loader@npm:9.4.2"
+"ts-loader@npm:9.5.4":
+  version: 9.5.4
+  resolution: "ts-loader@npm:9.5.4"
   dependencies:
     chalk: ^4.1.0
     enhanced-resolve: ^5.0.0
     micromatch: ^4.0.0
     semver: ^7.3.4
+    source-map: ^0.7.4
   peerDependencies:
     typescript: "*"
     webpack: ^5.0.0
-  checksum: 6f306ee4c615c2a159fb177561e3fb86ca2cbd6c641e710d408a64b4978e1ff3f2c9733df07bff27d3f82efbfa7c287523d4306049510c7485ac2669a9c37eb0
+  checksum: ee8a6883d0f8c0db0ea254fe4e9247ab0f6747cbbbee987af80e69822b840bdc2b67cee267ed3a93af803aeed47790d64dbaf07c001322b9091671f51cbf12b2
   languageName: node
   linkType: hard
 
@@ -6457,7 +6465,7 @@ __metadata:
     node-fetch: 3.3.0
     prettier: 2.8.8
     tabler-icons-react: 1.55.0
-    ts-loader: 9.4.2
+    ts-loader: 9.5.4
     ts-node: 10.9.1
     typescript: 5.0.4
     webpack: 5.82.0
