@@ -694,28 +694,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prop-types@npm:*":
-  version: 15.7.5
-  resolution: "@types/prop-types@npm:15.7.5"
-  checksum: 5b43b8b15415e1f298243165f1d44390403bb2bd42e662bca3b5b5633fdd39c938e91b7fce3a9483699db0f7a715d08cef220c121f723a634972fdf596aec980
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:18.2.6":
-  version: 18.2.6
-  resolution: "@types/react@npm:18.2.6"
+"@types/react@npm:19.2.7":
+  version: 19.2.7
+  resolution: "@types/react@npm:19.2.7"
   dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: dea9d232d8df7ac357367a69dcb557711ab3d5501807ffa77cebeee73d49ee94d095f298e36853c63ed47cce097eee4c7eae2aaa8c02fac3f0171ec1b523a819
-  languageName: node
-  linkType: hard
-
-"@types/scheduler@npm:*":
-  version: 0.16.2
-  resolution: "@types/scheduler@npm:0.16.2"
-  checksum: b6b4dcfeae6deba2e06a70941860fb1435730576d3689225a421280b7742318d1548b3d22c1f66ab68e414f346a9542f29240bc955b6332c5b11e561077583bc
+    csstype: ^3.2.2
+  checksum: b1f4c9a45862ea392b9ead060a5b5730b4c41b21fde097db35e639a8a0978460468d8da87f47226230bd4681d6de48ffee695595540084a8a849dde027c66a46
   languageName: node
   linkType: hard
 
@@ -2208,10 +2192,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"csstype@npm:^3.0.2":
-  version: 3.1.0
-  resolution: "csstype@npm:3.1.0"
-  checksum: 644e986cefab86525f0b674a06889cfdbb1f117e5b7d1ce0fc55b0423ecc58807a1ea42ecc75c4f18999d14fc42d1d255f84662a45003a52bb5840e977eb2ffd
+"csstype@npm:^3.2.2":
+  version: 3.2.3
+  resolution: "csstype@npm:3.2.3"
+  checksum: cb882521b3398958a1ce6ca98c011aec0bde1c77ecaf8a1dd4db3b112a189939beae3b1308243b2fe50fc27eb3edeb0f73a5a4d91d928765dc6d5ecc7bda92ee
   languageName: node
   linkType: hard
 
@@ -6445,7 +6429,7 @@ __metadata:
     "@slashnephy/eslint-config": 2.1.3
     "@slashnephy/prettier-config": 1.0.73
     "@types/node": 18.16.7
-    "@types/react": 18.2.6
+    "@types/react": 19.2.7
     "@types/webpack": 5.28.1
     babel-loader: 9.1.2
     babel-plugin-dynamic-import-webpack: 1.1.0
